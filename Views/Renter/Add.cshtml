@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+<style>
+    div {
+        padding: 2px;
+    }
+</style>
+<h2>Add</h2>
+<form method="post" action="/Renter/Add">
+    <div class="col-md-3">
+        <div>
+            <label>First name:</label>
+        </div>
+        <div>
+            <label>Last name:</label>
+        </div>
+        <div>
+            <label>Email address</label>
+        </div>
+        <div>
+            <label>Date of birth</label>
+        </div>
+        <div>
+            <label>Address</label>
+        </div>
+        <div>
+            <label>Username</label>
+        </div>
+        <div>
+            <label>Password</label>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div>
+            <input type="text" name="renterfirstname" />
+        </div>
+        <div>
+            <input type="text" name="renterlastname" />
+        </div>
+        <div>
+            <input type="text" name="renteremail" />
+        </div>
+        <div>
+            <input type="text" name="renteraddress" />
+        </div>
+        <div>
+            <input type="text" name="renterdob" />
+        </div>
+        <div>
+            <input type="text" name="renterusername" />
+        </div>
+        <div>
+            <input type="text" name="renterpassword" />
+        </div>
+        <div>
+            <input type="submit" name="register" />
+        </div>
+</form>
+</div>
