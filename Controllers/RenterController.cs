@@ -25,7 +25,7 @@ namespace PassionProject_N01338717.Controllers
         {
             Debug.WriteLine("This are my values from add page " + renterfirstname+" " + renterlastname + " " + renteremail + " " + renteraddress + " " + renterdob + " " + renterusername + " " + renterpassword);
 
-            string query = "insert into Renters";
+            string query = "insert into Renters (RenterFname,RenterLname,RenterEmail,RenterAddress,RenterDOB,RenterUsername,RenterPassowrd) values()";
 
             return View();
         }
