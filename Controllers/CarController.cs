@@ -35,7 +35,7 @@ namespace PassionProject_N01338717.Controllers
             sqlparams[3] = new SqlParameter("@carcolor",carcolor);
             db.Database.ExecuteSqlCommand(query, sqlparams);
 
-            return View();
+            return RedirectToAction("List");
         }
 
         public ActionResult List()
