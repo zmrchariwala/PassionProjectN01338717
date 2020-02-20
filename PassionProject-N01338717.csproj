@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RenterController.cs" />
     <Compile Include="Data\CarRenterContext.cs" />
@@ -137,8 +138,27 @@
     <Compile Include="Migrations\202002191424281_Intials.designer.cs">
       <DependentUpon>202002191424281_Intials.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002191922123_Initials.cs" />
+    <Compile Include="Migrations\202002191922123_Initials.designer.cs">
+      <DependentUpon>202002191922123_Initials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002192244254_Initials1.cs" />
+    <Compile Include="Migrations\202002192244254_Initials1.designer.cs">
+      <DependentUpon>202002192244254_Initials1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002200020227_Initials2.cs" />
+    <Compile Include="Migrations\202002200020227_Initials2.designer.cs">
+      <DependentUpon>202002200020227_Initials2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002200030379_Intials1.cs" />
+    <Compile Include="Migrations\202002200030379_Intials1.designer.cs">
+      <DependentUpon>202002200030379_Intials1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Renter.cs" />
+    <Compile Include="Models\ViewModel\CarView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,9 +199,16 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Renter\Add.cshtml" />
     <Content Include="Views\Renter\List.cshtml" />
+    <Content Include="Views\Renter\Show.cshtml" />
+    <Content Include="Views\Renter\Update.cshtml" />
+    <Content Include="Views\Car\Add.cshtml" />
+    <Content Include="Views\Car\List.cshtml" />
+    <Content Include="Views\Car\Update.cshtml" />
+    <Content Include="Views\Car\show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Booking\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -199,6 +226,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202002191424281_Intials.resx">
       <DependentUpon>202002191424281_Intials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002191922123_Initials.resx">
+      <DependentUpon>202002191922123_Initials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002192244254_Initials1.resx">
+      <DependentUpon>202002192244254_Initials1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002200020227_Initials2.resx">
+      <DependentUpon>202002200020227_Initials2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002200030379_Intials1.resx">
+      <DependentUpon>202002200030379_Intials1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

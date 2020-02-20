@@ -1,10 +1,31 @@
-﻿
+﻿@model List<PassionProject_N01338717.Models.Renter>
 @{
     ViewBag.Title = "List";
 }
 
-<h2>List</h2>
+<h2>List of renters</h2>
+<table class="table table-striped">
+    <tr>
+        <th>Renter first name</th>
+        <th>Renter last name</th>
+        <th>Renter email address</th>
+        <th>Renter Address</th>
+        <th>Renter DOB</th>
+        <th colspan="2">Action</th>
+    </tr>
 
-<form>
-
-</form>
+    @{
+    foreach (var renter in Model)
+    {
+        <tr>
+            <td><a href="/Renter/Show/@renter.RenterID">@renter.RenterFname</a></td>
+            <td>@renter.RenterLname</td>
+            <td>@renter.RenterEmail</td>
+            <td>@renter.RenterAddress</td>
+            <td>@renter.RenterDOB</td>
+            <td><a href="/Renter/Update/@renter.RenterID">Update</a></td>
+            <td><a href="/Renter/Delete/@renter.RenterID">Delete</a></td>
+        </tr>
+        }
+    }
+</table>

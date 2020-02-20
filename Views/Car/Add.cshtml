@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+<style>
+    div {
+        padding: 2px;
+    }
+</style>
+<h2>Add car</h2>
+<form method="post" action="/Car/Add">
+    <div class="col-md-3">
+        <div>
+            <label>Car make:</label>
+        </div>
+        <div>
+            <label>Car model:</label>
+        </div>
+        <div>
+            <label>Car year</label>
+        </div>
+        <div>
+            <label>Car color</label>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div>
+            <input type="text" name="carmake" />
+        </div>
+        <div>
+            <input type="text" name="carmodel" />
+        </div>
+        <div>
+            <input type="text" name="caryear" />
+        </div>
+        <div>
+            <input type="text" name="carcolor" />
+        </div>
+        <div>
+            <input type="submit" name="add" value="Add car" />
+        </div>
+    </div>
+</form>
+
+

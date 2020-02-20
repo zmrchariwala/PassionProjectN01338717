@@ -1,0 +1,29 @@
+﻿@model List<PassionProject_N01338717.Models.Car>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of cars</h2>
+<table class="table table-striped">
+    <tr>
+        <th>Car make</th>
+        <th>Car model</th>
+        <th>Car year</th>
+        <th>Car color</th>
+        <th>Action</th>
+    </tr>
+    @{ 
+    foreach (var car in Model)
+    {
+    <tr>
+        <td><a href="/Car/show/@car.CarID">@car.Carmake</a></td>
+        <td>@car.Carmodel</td>
+        <td>@car.Caryear</td>
+        <td>@car.Carcolor</td>
+        <td><a href="/Car/Update/@car.CarID">Update</a></td>
+        <td><a>Delete</a></td>
+    </tr>
+     }
+    }
+</table>
+<a href="/Car/Add">Add cars</a>

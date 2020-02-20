@@ -1,0 +1,35 @@
+﻿@model PassionProject_N01338717.Models.ViewModel.CarView
+@{
+    ViewBag.Title = "show";
+}
+
+
+
+<h2>Car details</h2>
+<div>
+    <label>Car make:</label>
+    <label>@Model.car.Carmake</label>
+</div>
+<div>
+    <label>Car model:</label>
+    <label>@Model.car.Carmodel</label>
+</div>
+<div>
+    <label>Car year:</label>
+    <label>@Model.car.Caryear</label>
+</div>
+<div>
+    <label>Car color:</label>
+    <label>@Model.car.Carcolor</label>
+</div>
+<h2>Renters</h2>
+@{ 
+    foreach (var renter in Model.renters)
+    {
+<div class="container well" >
+    @renter.RenterFname
+</div>
+        }
+    }
+
+

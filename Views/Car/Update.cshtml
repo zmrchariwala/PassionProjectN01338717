@@ -1,0 +1,40 @@
+﻿@model PassionProject_N01338717.Models.Car
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+<form method="post" action="/Car/Update/@Model.CarID">
+    <div class="col-md-3">
+        <div>
+            <label>Car make:</label>
+        </div>
+        <div>
+            <label>Car model:</label>
+        </div>
+        <div>
+            <label>Car year</label>
+        </div>
+        <div>
+            <label>Car color</label>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div>
+            <input type="text" name="carmake" value="@Model.Carmake" />
+        </div>
+        <div>
+            <input type="text" name="carmodel" value="@Model.Carmodel" />
+        </div>
+        <div>
+            <input type="text" name="caryear" value="@Model.Caryear" />
+        </div>
+        <div>
+            <input type="text" name="carcolor" value="@Model.Carcolor" />
+        </div>
+        <div>
+            <input type="submit" name="update" value="Update car" />
+        </div>
+    </div>
+</form>
+

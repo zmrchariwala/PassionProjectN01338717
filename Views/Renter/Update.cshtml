@@ -1,14 +1,10 @@
-﻿
+﻿@model PassionProject_N01338717.Models.Renter
 @{
-    ViewBag.Title = "Add";
+    ViewBag.Title = "Update";
 }
-<style>
-    div {
-        padding: 2px;
-    }
-</style>
-<h2>Renter registration</h2>
-<form method="post" action="/Renter/Add">
+
+<h2>Update</h2>
+<form method="post" action="">
     <div class="col-md-3">
         <div>
             <label>First name:</label>
@@ -34,29 +30,28 @@
     </div>
     <div class="col-md-8">
         <div>
-            <input type="text" name="renterfirstname" />
+            <input type="text" name="renterfirstname" value="@Model.RenterFname" />
         </div>
         <div>
-            <input type="text" name="renterlastname" />
+            <input type="text" name="renterlastname" value="@Model.RenterLname" />
         </div>
         <div>
-            <input type="text" name="renteremail" />
+            <input type="text" name="renteremail" value="@Model.RenterEmail"/>
         </div>
         <div>
-            <input type="text" name="renteraddress" />
+            <input type="text" name="renteraddress" value="@Model.RenterAddress" />
         </div>
         <div>
-            <input type="text" name="renterdob" />
+            <input type="text" name="renterdob" value="@Model.RenterDOB" />
         </div>
         <div>
-            <input type="text" name="renterusername" />
+            <input type="text" name="renterusername" value=@Model.RenterUsername />
         </div>
         <div>
-            <input type="text" name="renterpassword" />
+            <input type="text" name="renterpassword" value=@Model.RenterPassword />
         </div>
         <div>
-            <input type="submit" name="register" />
-            <a href="/Renter/List">List all renters</a>
+            <input type="submit" name="update" />
         </div>
 </form>
-</div>
+
