@@ -10,6 +10,8 @@ namespace PassionProject_N01338717.Models
 {
     public class Renter
     {
+        //Renter class represents tabke in database
+        //Whatever fields you create here will create database
         [Key]
         public int RenterID { get; set; }
         public string RenterFname { get; set; }

@@ -11,7 +11,7 @@ namespace PassionProject_N01338717.Models
     public class Car
     {
         [Key]
-
+        //This represent car table in database
         public int CarID { get; set; }
         public string Carmake { get; set; }
         public string Carmodel { get; set; }

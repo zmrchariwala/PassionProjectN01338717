@@ -26,9 +26,14 @@
 @{ 
     foreach (var renter in Model.renters)
     {
-<div class="container well" >
-    @renter.RenterFname
-</div>
+    <div class="container well">
+        
+        <label>@renter.RenterFname</label>
+        <label>@renter.RenterLname</label>
+        <label>@renter.RenterEmail</label>
+        <label>@renter.RenterAddress</label>
+        
+    </div>
         }
     }
 
