@@ -160,6 +160,7 @@
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Renter.cs" />
     <Compile Include="Models\ViewModel\CarView.cs" />
+    <Compile Include="Models\ViewModel\RenterView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

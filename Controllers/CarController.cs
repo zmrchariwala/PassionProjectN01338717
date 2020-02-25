@@ -69,7 +69,7 @@ namespace PassionProject_N01338717.Controllers
 
         public ActionResult show(int? id)
         {
-            List<Renter> renters = db.Renters.SqlQuery("select * from Renters join Bookings on Renters.RenterID = Bookings.BookingID where Bookings.CarID = @id;",new SqlParameter("@id", id)).ToList();
+            List<Renter> renters = db.Renters.SqlQuery("select * from Renters join Bookings on Renters.RenterID = Bookings.RenterID where Bookings.CarID = @id;",new SqlParameter("@id", id)).ToList();
             Car car = db.Cars.SqlQuery("select * from Cars where CarID=@CarID", new SqlParameter("@CarID", id)).FirstOrDefault();
 
             CarView carView = new CarView();

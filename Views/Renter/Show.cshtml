@@ -1,4 +1,4 @@
-﻿@model PassionProject_N01338717.Models.Renter
+﻿@model PassionProject_N01338717.Models.ViewModel.RenterView
 @{
     ViewBag.Title = "Show";
 }
@@ -6,21 +6,35 @@
 <h2>Renter detail</h2>
 <div>
     <label>First name:</label>
-    <label>@Model.RenterFname</label>
+    <label>@Model.renters.RenterFname</label>
 </div>
 <div>
     <label>Last name:</label>
-    <label>@Model.RenterLname</label>
+    <label>@Model.renters.RenterLname</label>
 </div>
 <div>
     <label>Email address:</label>
-    <label>@Model.RenterEmail</label>
+    <label>@Model.renters.RenterEmail</label>
 </div>
 <div>
     <label>Address:</label>
-    <label>@Model.RenterAddress</label>
+    <label>@Model.renters.RenterAddress</label>
 </div>
 <div>
     <label>Date of birth:</label>
-    <label>@Model.RenterDOB</label>
+    <label>@Model.renters.RenterDOB</label>
 </div>
+<h2>Cars</h2>
+@{
+    foreach (var car in Model.car)
+    {
+        <div class="container well">
+
+            <label>@car.Carmake</label>
+            <label>@car.Carmodel</label>
+            <label>@car.Caryear</label>
+            <label>@car.Carcolor</label>
+
+        </div>
+    }
+}

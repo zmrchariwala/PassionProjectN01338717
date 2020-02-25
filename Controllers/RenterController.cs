@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using PassionProject_N01338717.Models;
 using PassionProject_N01338717.Data;
+using PassionProject_N01338717.Models.ViewModel;
 
 namespace PassionProject_N01338717.Controllers
 {
@@ -54,8 +55,17 @@ namespace PassionProject_N01338717.Controllers
         public ActionResult Show(int? id)
         {
 
+            List<Car> cars = db.Cars.SqlQuery("select * from Cars join Bookings on Cars.CarID = Bookings.CarID where Bookings.RenterID = @id;", new SqlParameter("@id", id)).ToList();
             Renter renter = db.Renters.SqlQuery("select * from Renters where RenterID=@RenterID", new SqlParameter("@RenterID", id)).FirstOrDefault();
-            return View(renter);
+
+            RenterView renterview = new RenterView();
+            renterview.car = cars;
+            renterview.renters = renter;
+            return View(renterview);
+
+
+            //Renter renter = db.Renters.SqlQuery("select * from Renters where RenterID=@RenterID", new SqlParameter("@RenterID", id)).FirstOrDefault();
+            //return View(renter);
         }
 
         [HttpGet]
